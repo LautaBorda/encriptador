@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* general container */
+
+.container {
+    position: relative;
+    background-color: gray;
+    display: grid;
+    gap: 10px;
+    margin: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas: 
+        ". . ."
+        "textInput textInput textInput"
+        "textInput textInput textInput"
+        "textInput textInput textInput"
+        "textInput textInput textInput"
+        "textInput textInput textInput"
+        "textInput textInput textInput"
+        "ebutton ebutton ebutton"
+        "ebutton ebutton ebutton"
+        "footer footer footer"
+        "footer footer footer"
+    ;
+}
+
+/* text input & buttons  */
+
+.textInput {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 270px;
+    grid-area: textInput;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textInput>p {
+    text-align: center;
+}
+
+input {
+    height: 70%;
+    width: 70%;
+    margin: auto;
+}
+
+.ebuttons {
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: auto;
+    display: flex;
+    grid-area: ebutton;
+
+}
+
+/* footer */
+
+.footer { 
+    display: flex;
+    grid-area: footer;
+}
