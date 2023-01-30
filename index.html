@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/789eadf227.js" crossorigin="anonymous"></script>
     <!-- link to css -->
     <link rel="stylesheet" href="./assets/css/styles.css">
+
+
     <title>Text Encryptor</title>
 </head>
+
 <body>
     <main class="container">
+        <!-- text input  -->
         <div class="textInput">
-                 <p>Ingrese su texto sin mayusculas y sin acentos <button>delete</button></p> 
-                <input type="text">
-            </div>
+            <p>Ingrese su texto sin mayusculas y sin acentos
+                <a href="#">
+                    <img src="./assets/img/trash-can-solid.svg" alt="trashcan icon">
+                </a>
+            </p>
+            <textarea spellcheck="false" type="text" id="input" placeholder="Ingrese texto aquí"></textarea>
         </div>
-
+        </div>
+        <!-- button of text input  -->
         <div class="ebuttons">
             <button>ENCRIPTAR</button>
             <button>DESENCRIPTAR</button>
         </div>
+        <!-- message & copy btn -->
+        <div class="message">
+            <textarea readonly id="msg">Ningún mensaje fue encontrado...</textarea>
+            <img src="./assets/img/—Pngtree—question mark speech bubble dialog_3945673.png" alt="question mark image">
+            <button class="copyBtn">COPIAR</button>
+        </div>
 
+        <!-- footer -->
         <footer class="footer">
 
         </footer>
@@ -28,4 +46,5 @@
     <!-- link to js file -->
     <script src="./main.js"></script>
 </body>
+
 </html>
