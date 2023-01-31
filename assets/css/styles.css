@@ -65,6 +65,7 @@ a>img:active{
 
 
 #input {
+    padding: 24px;
     text-align: center;
     border: none;
     outline: none;
