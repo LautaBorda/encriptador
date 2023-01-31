@@ -109,6 +109,7 @@ a>img:active{
     justify-content: center;
     margin-right: 35px;
     border-radius: 65px;
+    box-shadow: 3px 3px rgb(0 0 0 / 15%);
 }
 
 
