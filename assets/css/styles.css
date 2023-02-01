@@ -92,7 +92,7 @@ a>img:active{
 .ebuttons>button {
     width: 35vh;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px;
 }
 
 
@@ -131,7 +131,10 @@ img {
 }
 
 .copyBtn {
-    width: 25%;
+    border: 1px;
+    border-radius: 20px;
+    height: 12vh;
+    width: 35vh;
 }
 
 

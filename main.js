@@ -6,6 +6,7 @@ let encryptBtn = document.getElementsByClassName('encrypt');
 let desencryptBtn = document.getElementsByClassName('desencrypt');
 let copyBtn = document.getElementsByClassName('copyBtn');
 let msg = document.getElementById('msg');
+let image = document.getElementsByClassName('question-mark');
 
 
 // ENCRYPT FUNCION 
@@ -21,6 +22,9 @@ function encryptor() {
 
     msg.value = encMsg;
 
+    if(msg.value != "") {
+        ocultarImagen()
+    }
 }
 
 // DECRYPT FUNCTION
@@ -33,14 +37,37 @@ function desencrypter() {
     desenMsg = desenMsg.replaceAll('ai', 'a')
     desenMsg = desenMsg.replaceAll('ufat', 'u')
 
-    msg.value=desenMsg;
+    msg.value = desenMsg;
 
 }
 
 // DELETE FUNCTION 
 
-function dlt(){
+function dlt() {
     textInput.value = "";
+    msg.value="No se encontro ningún mensaje";
+    mostrarImagen()
+}
+
+// COPY FUNCTION USING CLIPBOARD API
+
+function copyToClipboard() {
+    if (msg.value != "") {
+        textInput.value = msg.value;
+        navigator.clipboard.writeText(msg.value);
+        textInput.select();
+    }
+    textInput.focus();
+}
+
+function ocultarImagen() {
+    image[0].style.visibility = "hidden"
+}
+
+/*MOSTRAR IMAGEN*/
+
+function mostrarImagen() {
+    image[0].style.visibility = "visible"
 }
 
 // EVENT LISTENERS
@@ -48,3 +75,4 @@ function dlt(){
 encryptBtn[0].addEventListener('click', encryptor)
 desencryptBtn[0].addEventListener('click', desencrypter)
 deleteBtn[0].addEventListener('click', dlt)
+copyBtn[0].addEventListener('click', copyToClipboard)
