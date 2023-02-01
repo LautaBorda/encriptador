@@ -70,7 +70,7 @@ function mostrarImagen() {
     image[0].style.visibility = "visible"
 }
 
-// EVENT LISTENERS
+// // EVENT LISTENERS AND FUNCTIONAL BUTTONS 
 
 encryptBtn[0].addEventListener('click', encryptor)
 desencryptBtn[0].addEventListener('click', desencrypter)
