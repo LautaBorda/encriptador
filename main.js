@@ -47,6 +47,7 @@ function dlt() {
     textInput.value = "";
     msg.value="No se encontro ningún mensaje";
     mostrarImagen()
+    
 }
 
 // COPY FUNCTION USING CLIPBOARD API
